@@ -1,0 +1,10 @@
+streamlit
+pandas
+numpy
+pandas
+matplotlib
+seaborn
+plotly
+streamlit_folium
+folium
+pydeck

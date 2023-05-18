@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>pydeck</title>
+        <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.13.0/mapbox-gl.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <script src='https://cdn.jsdelivr.net/npm/@deck.gl/jupyter-widget@~8.9.*/dist/index.js'></script>
+    <style>
+    body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#deck-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+#deck-container canvas {
+  z-index: 1;
+  background: none;
+}
+    </style>
+  </head>
+  <body>
+    <div id="deck-container">
+    </div>
+  </body>
+  <script>
+    const container = document.getElementById('deck-container');
+    const jsonInput = {
+  "initialViewState": {
+    "bearing": 0,
+    "latitude": 37.53,
+    "longitude": 127.6,
+    "pitch": 3,
+    "zoom": 6
+  },
+  "layers": [
+    {
+      "@@type": "ScatterplotLayer",
+      "data": [
+        {
+          "Unnamed: 0": 0,
+          "count": 852,
+          "devide": 12.6651,
+          "exits_radius": 795.7732088981131,
+          "latlon": [
+            128.209315,
+            37.555837
+          ],
+          "sum": 633255,
+          "tax_per_one": 743.26,
+          "\uacbd\ub3c4": 128.209315,
+          "\uad11\uc5ed": "\uac15\uc6d0\ub3c4",
+          "\uc704\ub3c4": 37.555837
+        },
+        {
+          "Unnamed: 0": 1,
+          "count": 10172,
+          "devide": 183.61924,
+          "exits_radius": 3030.0102310058296,
+          "latlon": [
+            127.190292,
+            37.567167
+          ],
+          "sum": 9180962,
+          "tax_per_one": 902.57,
+          "\uacbd\ub3c4": 127.190292,
+          "\uad11\uc5ed": "\uacbd\uae30\ub3c4",
+          "\uc704\ub3c4": 37.567167
+        },
+        {
+          "Unnamed: 0": 2,
+          "count": 1745,
+          "devide": 26.54728,
+          "exits_radius": 1152.1128416956387,
+          "latlon": [
+            128.664734,
+            35.259787
+          ],
+          "sum": 1327364,
+          "tax_per_one": 760.67,
+          "\uacbd\ub3c4": 128.664734,
+          "\uad11\uc5ed": "\uacbd\uc0c1\ub0a8\ub3c4",
+          "\uc704\ub3c4": 35.259787
+        },
+        {
+          "Unnamed: 0": 3,
+          "count": 1149,
+          "devide": 20.54302,
+          "exits_radius": 1013.4845830105163,
+          "latlon": [
+            128.664734,
+            36.248647
+          ],
+          "sum": 1027151,
+          "tax_per_one": 893.95,
+          "\uacbd\ub3c4": 128.664734,
+          "\uad11\uc5ed": "\uacbd\uc0c1\ubd81\ub3c4",
+          "\uc704\ub3c4": 36.248647
+        },
+        {
+          "Unnamed: 0": 4,
+          "count": 523,
+          "devide": 8.87706,
+          "exits_radius": 666.2229356604289,
+          "latlon": [
+            126.831302,
+            35.126033
+          ],
+          "sum": 443853,
+          "tax_per_one": 848.67,
+          "\uacbd\ub3c4": 126.831302,
+          "\uad11\uc5ed": "\uad11\uc8fc\uad11\uc5ed\uc2dc",
+          "\uc704\ub3c4": 35.126033
+        },
+        {
+          "Unnamed: 0": 5,
+          "count": 892,
+          "devide": 14.8625,
+          "exits_radius": 862.0469824783333,
+          "latlon": [
+            128.583052,
+            35.798838
+          ],
+          "sum": 743125,
+          "tax_per_one": 833.1,
+          "\uacbd\ub3c4": 128.583052,
+          "\uad11\uc5ed": "\ub300\uad6c\uad11\uc5ed\uc2dc",
+          "\uc704\ub3c4": 35.798838
+        },
+        {
+          "Unnamed: 0": 6,
+          "count": 681,
+          "devide": 12.7536,
+          "exits_radius": 798.5486835503518,
+          "latlon": [
+            127.378953,
+            36.321655
+          ],
+          "sum": 637680,
+          "tax_per_one": 936.39,
+          "\uacbd\ub3c4": 127.378953,
+          "\uad11\uc5ed": "\ub300\uc804\uad11\uc5ed\uc2dc",
+          "\uc704\ub3c4": 36.321655
+        },
+        {
+          "Unnamed: 0": 7,
+          "count": 1578,
+          "devide": 31.26694,
+          "exits_radius": 1250.3387540982644,
+          "latlon": [
+            129.053922,
+            35.198362
+          ],
+          "sum": 1563347,
+          "tax_per_one": 990.71,
+          "\uacbd\ub3c4": 129.053922,
+          "\uad11\uc5ed": "\ubd80\uc0b0\uad11\uc5ed\uc2dc",
+          "\uc704\ub3c4": 35.198362
+        },
+        {
+          "Unnamed: 0": 8,
+          "count": 5888,
+          "devide": 132.66122,
+          "exits_radius": 2575.472966272409,
+          "latlon": [
+            126.956764,
+            37.540705
+          ],
+          "sum": 6633061,
+          "tax_per_one": 1126.54,
+          "\uacbd\ub3c4": 126.956764,
+          "\uad11\uc5ed": "\uc11c\uc6b8\ud2b9\ubcc4\uc2dc",
+          "\uc704\ub3c4": 37.540705
+        },
+        {
+          "Unnamed: 0": 9,
+          "count": 134,
+          "devide": 2.41188,
+          "exits_radius": 347.26646829200195,
+          "latlon": [
+            127.249485,
+            36.504073
+          ],
+          "sum": 120594,
+          "tax_per_one": 899.96,
+          "\uacbd\ub3c4": 127.249485,
+          "\uad11\uc5ed": "\uc138\uc885\ud2b9\ubcc4\uc790\uce58\uc2dc",
+          "\uc704\ub3c4": 36.504073
+        },
+        {
+          "Unnamed: 0": 10,
+          "count": 499,
+          "devide": 6.86018,
+          "exits_radius": 585.6697021359395,
+          "latlon": [
+            129.239078,
+            35.519301
+          ],
+          "sum": 343009,
+          "tax_per_one": 687.39,
+          "\uacbd\ub3c4": 129.239078,
+          "\uad11\uc5ed": "\uc6b8\uc0b0\uad11\uc5ed\uc2dc",
+          "\uc704\ub3c4": 35.519301
+        },
+        {
+          "Unnamed: 0": 11,
+          "count": 2206,
+          "devide": 36.22918,
+          "exits_radius": 1345.9045285606257,
+          "latlon": [
+            126.573234,
+            37.469221
+          ],
+          "sum": 1811459,
+          "tax_per_one": 821.15,
+          "\uacbd\ub3c4": 126.573234,
+          "\uad11\uc5ed": "\uc778\ucc9c\uad11\uc5ed\uc2dc",
+          "\uc704\ub3c4": 37.469221
+        },
+        {
+          "Unnamed: 0": 12,
+          "count": 666,
+          "devide": 10.71756,
+          "exits_radius": 732.0368843166306,
+          "latlon": [
+            126.893113,
+            34.8194
+          ],
+          "sum": 535878,
+          "tax_per_one": 804.62,
+          "\uacbd\ub3c4": 126.893113,
+          "\uad11\uc5ed": "\uc804\ub77c\ub0a8\ub3c4",
+          "\uc704\ub3c4": 34.8194
+        },
+        {
+          "Unnamed: 0": 13,
+          "count": 665,
+          "devide": 10.59114,
+          "exits_radius": 727.7066716747896,
+          "latlon": [
+            127.144185,
+            35.716705
+          ],
+          "sum": 529557,
+          "tax_per_one": 796.33,
+          "\uacbd\ub3c4": 127.144185,
+          "\uad11\uc5ed": "\uc804\ub77c\ubd81\ub3c4",
+          "\uc704\ub3c4": 35.716705
+        },
+        {
+          "Unnamed: 0": 14,
+          "count": 451,
+          "devide": 8.37456,
+          "exits_radius": 647.0919563709627,
+          "latlon": [
+            126.542671,
+            33.364805
+          ],
+          "sum": 418728,
+          "tax_per_one": 928.44,
+          "\uacbd\ub3c4": 126.542671,
+          "\uad11\uc5ed": "\uc81c\uc8fc\ud2b9\ubcc4\uc790\uce58\ub3c4",
+          "\uc704\ub3c4": 33.364805
+        },
+        {
+          "Unnamed: 0": 15,
+          "count": 1501,
+          "devide": 22.41498,
+          "exits_radius": 1058.654334520952,
+          "latlon": [
+            126.779757,
+            36.557229
+          ],
+          "sum": 1120749,
+          "tax_per_one": 746.67,
+          "\uacbd\ub3c4": 126.779757,
+          "\uad11\uc5ed": "\ucda9\uccad\ub0a8\ub3c4",
+          "\uc704\ub3c4": 36.557229
+        },
+        {
+          "Unnamed: 0": 16,
+          "count": 860,
+          "devide": 13.11602,
+          "exits_radius": 809.8154110660033,
+          "latlon": [
+            127.929344,
+            36.628503
+          ],
+          "sum": 655801,
+          "tax_per_one": 762.56,
+          "\uacbd\ub3c4": 127.929344,
+          "\uad11\uc5ed": "\ucda9\uccad\ubd81\ub3c4",
+          "\uc704\ub3c4": 36.628503
+        }
+      ],
+      "filled": true,
+      "getFillColor": [
+        255,
+        50,
+        0
+      ],
+      "getLineColor": [
+        255,
+        180,
+        0
+      ],
+      "getPosition": "@@=latlon",
+      "getRadius": "@@=exits_radius",
+      "id": "f48cd42b-669d-4ddd-88eb-ecc57632febc",
+      "lineWidthMinPixels": 3,
+      "opacity": 0.8,
+      "pickable": true,
+      "radiusMaxPixels": 100,
+      "radiusMinPixels": 10,
+      "radiusScale": 10,
+      "stroked": true
+    }
+  ],
+  "mapProvider": "carto",
+  "mapStyle": "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json",
+  "mapboxKey": "",
+  "views": [
+    {
+      "@@type": "MapView",
+      "controller": true
+    }
+  ]
+};
+    const tooltip = {'text': '{광역}\n{sum}'};
+    const customLibraries = null;
+    const configuration = null;
+
+    const deckInstance = createDeck({
+                  container,
+      jsonInput,
+      tooltip,
+      customLibraries,
+      configuration
+    });
+
+  </script>
+</html>
