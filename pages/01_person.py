@@ -10,7 +10,6 @@ import pandas as pd
 import json
 from streamlit_folium import st_folium
 import folium
-import FinanceDataReader as fdr # 금융 관련 API 종합해놓은 패키지
 import datetime
 import matplotlib.pyplot as plt
 import matplotlib 
